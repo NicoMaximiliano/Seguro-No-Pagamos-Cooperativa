@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/font/flaticon.css">
+    <link rel="stylesheet" href="./css/form.css">
+</head>
+<body>
+    <header>
+        <section class="header-icons-container">
+            <div class="icons">
+                <a href="https://www.facebook.com"><span class="flaticon-001-facebook"></span></a>
+                <a href="https://twitter.com"><span class="flaticon-002-twitter"></span></a>
+                <a href="https://www.instagram.com"><span class="flaticon-011-instagram"></span></a>
+                <a href="https://ar.linkedin.com"><span class="flaticon-010-linkedin"></span></a>
+                <a href="https://www.youtube.com"><span class="flaticon-008-youtube"></span></a>
+            </div>
+        </section>
+        <nav>
+            <section class="nav-title-container">
+                <a href="/"><h1>Seguro No Pagamos Cooperativa</h1></a>
+            </section>
+        </nav>
+    </header>
+
+    <main class="container flex flex--column flex--center">
+        <section class="card">
+            <form action="" class="flex flex--column">
+                <fieldset>
+                    <legend class="form__label">Información básica</legend>
+                    <div class="input-container">
+                        <input name="name" id="name" class="input" type="text" placeholder="Nombre" required data-tipo="nombre">
+                        <label class="input-label" for="name">Nombre</label>
+                    </div>
+                    <div class="input-container">
+                        <input name="lastname" id="lastname" class="input" type="text" placeholder="Apellido" required data-tipo="apellido">
+                        <label class="input-label" for="lastname">Apellido</label>
+                    </div>
+                    <div class="input-container">
+                        <input name="dni"
+                               id="dni"
+                               class="input"
+                               type="number"
+                               placeholder="DNI" required
+                               pattern="^(?=.*[0-9]).{8}$"
+                               title="Al menos 6 caracteres, maximo 12, debe contener una letra  minuscula, una letra mayuscula, un numero y no puede contener caracteres especiales."
+                               data-tipo="dni">
+                        <label class="input-label" for="dni">DNI</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend class="form__label">Información personal</legend>
+                    <div class="input-container">
+                        <input name="phoneNumber" id="phoneNumber" class="input" type="tel" placeholder="Número telefónico" pattern="\d{10}" required
+                               minlength="10" maxlength="10" data-tipo="telefono">
+                        <label class="input-label" for="phoneNumber">Número telefónico</label>
+                    </div>
+                    <div class="input-container">
+                        <input name="email" id="email" class="input" type="email" placeholder="Email" required data-tipo="email">
+                        <label class="input-label" for="email">Email</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend class="form__label">Tipo de Seguro</legend>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioDefault" id="radio1" value="Básico">
+                            <label class="form-check-label" for="radio1">
+                            Básico
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioDefault" id="radio2" value="Intermedio">
+                            <label class="form-check-label" for="radio2">
+                            Intermedio
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioDefault" id="radio3" value="Premium">
+                            <label class="form-check-label" for="radio3">
+                            Premium
+                        </div>
+                </fieldset>
+                <button class="button">
+                    Enviar
+                </button>
+            </form>
+        </section>
+
+
+        <div class="card alert" role="alert" id="alertCard">
+            <h4>Solicitud enviada!</h4>
+            <p>Pronto un asesor se contactara con usted.</p>
+            <hr>
+            <p class="montoSeguro"></p>
+        </div>
+    </main>
+
+    
+
+    <footer>
+        <p>Desarrollado por Nicolás Maximiliano Orellano</p>
+    </footer>
+
+    <script src="js/form.js"></script>
+</body>
+</html>
